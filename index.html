@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/styles.css">
+	<title>ONE POSITION</title>
+</head>
+<body>
+
+		<div id="brand">
+			<h1>ONE POSITION <s>BRAND</s></h1>
+		</div>
+		<div id="pic">
+			<img src="https://imgaz1.chiccdn.com/thumb/large/oaupload/ser1/newchic/images/47/30/e9c04f82-e6e3-4d92-b0ce-e27fd370c1a3.jpeg">
+		</div>
+
+</body>
+	<script type="text/javascript">
+		const [red, green, blue] = [255, 255, 255]
+		const section1 = document.querySelector('html')
+		
+		window.addEventListener('scroll', () => {
+		  let y = 1 + (window.scrollY || window.pageYOffset) / 150
+		  y = y < 1 ? 1 : y // ensure y is always >= 1 (due to Safari's elastic scroll)
+		  const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
+		  section1.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+		})
+	</script>
+</html>

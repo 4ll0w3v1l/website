@@ -1,0 +1,18 @@
+*{
+	overflow-y: invisible;
+}
+#brand{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid black;
+  padding: 10px;
+}
+#pic{
+  position: absolute;
+  left: 50%;
+  top: 150%;
+  transform: translate(-50%, -50%);
+
+}
