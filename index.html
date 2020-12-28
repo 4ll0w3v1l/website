@@ -10,8 +10,8 @@
 		<div id="brand">
 			<h1>ONE POSITION <s>BRAND</s></h1>
 		</div>
-		<div id="fix">
-			<img id="pic" src="img/hoodie.png">
+		<div id="pic">
+			<img src="img/hoodie.png">
 		</div>
 
 </body>
@@ -20,7 +20,7 @@
 		const section1 = document.querySelector('html')
 		
 		window.addEventListener('scroll', () => {
-		  let y = 1 + (window.scrollY || window.pageYOffset) / 150
+		  let y = 1 + (window.scrollY || window.pageYOffset) / 50
 		  y = y < 1 ? 1 : y // ensure y is always >= 1 (due to Safari's elastic scroll)
 		  const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
 		  section1.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
