@@ -16,14 +16,40 @@
 
 </body>
 	<script type="text/javascript">
+		window.onload = function myFunc(){
+			
+
+		};
 		const [red, green, blue] = [255, 255, 255]
 		const section1 = document.querySelector('html')
 		
 		window.addEventListener('scroll', () => {
-		  let y = 1 + (window.scrollY || window.pageYOffset) / 150
+		  let y = 1 + (window.scrollY || window.pageYOffset) / 75
 		  y = y < 1 ? 1 : y // ensure y is always >= 1 (due to Safari's elastic scroll)
 		  const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
 		  section1.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
-		})
+		});
+	const x = document.getElementById('brand').innerHTML;
+	var i = 1;
+	function sleep(milliseconds) {
+		const date = Date.now();
+		let currentDate = null;
+		do {
+			currentDate = Date.now();
+		} while (currentDate - date < milliseconds);
+	}
+	function myFunc(){
+		while (true){
+			let y = Array.from(x);
+			y = y.slice(0,i);
+			document.getElementById('brand').innerHTML = y.join('');
+			console.log(i);
+			i += 1;
+			sleep(1000);
+			if (i>12){
+				i = 1;
+			};
+		};
+	}
 	</script>
 </html>
