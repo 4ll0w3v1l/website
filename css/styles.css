@@ -17,9 +17,40 @@
   border: 5px solid black;
   padding: 10px;
 }
-#pic{
+#pic, #timer, #desc, #modelExamples, #mDesc{
   position: absolute;
   left: 50%;
   top: 150%;
   transform: translate(-50%, -50%); 
+}
+#pic img{
+  width: 750px;
+  height: 845px;
+}
+
+#timer{
+  border: 5px solid white;
+  color: white;
+  transform: translate(25vw,0);
+  padding-right: 10px;
+  padding-left: 10px;
+}
+#desc {
+  transform: translate(-40vw,-400px);
+  color: white;
+  border: 5px solid white;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 300px;
+  padding-bottom: 323px;
+}
+#modelExamples{
+  transform: translate(-50%,100%);
+}
+#modelExamples img{
+  width: 750px;
+  height: 845px;
+}
+#mDesc{
+  
 }

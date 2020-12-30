@@ -3,15 +3,27 @@
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/styles.css">
-	<title>ONE POSITION</title>
+	<title>hellasweat.</title>
 </head>
 <body>
 
 		<div id="brand">
-			<h1>ONE <a id="change"> POSITION</a> <s id="notThis">BRAND</s></h1>
+			<h1>ONE <a id="change"> POSITION</a> <s>BRAND</s></h1>
 		</div>
 		<div id="pic">
 			<img src="img/hoodie.png">
+		</div>
+		<div id="timer">
+			<h2><a id='timerChange'>SOME TIME...</a><br><br> UNTIL RELEASE</h2>	
+		</div>
+		<div id="desc">
+			<h2> our first, yet best hoodie.<br><br>yellow. white. anycolor.<br><br>buy one now till no more left. </h2>
+		</div>
+		<div id="modelExamples">
+			<img src="img/test.png">
+		</div>
+		<div id="mDesc">
+			<!-- <h1>THIS MODEL ON A MODEL.</h1> -->
 		</div>
 
 </body>
@@ -24,34 +36,37 @@
 		
 		window.addEventListener('scroll', () => {
 		  let y = 1 + (window.scrollY || window.pageYOffset) / 75
-		  y = y < 1 ? 1 : y // ensure y is always >= 1 (due to Safari's elastic scroll)
+		  y = y < 1 ? 1 : y
 		  const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
 		  section1.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
 		});
+	function anim(){
+		let x = ['POSITION', 'ITEM','HOODIE'];
+		let i = 0;
+		let z = 0;
+	
+		let interval = setInterval(function() { 
+	
+			 if (z>2){
+				z=0;
+				i=0;
+				
+			} if (i>x[z].length+1){
+				sleep(250).then(() => {
+				i=0;
+				z++;
+				});
+			}else{
+				let y = Array.from(x[z]);
+				y = y.slice(0,i);
+				let text = $("#change");
+				$(text).text(y.join(''));
+			}
+			i++
+		},150 );};
 
-	var x = ['POSITION', 'ITEM','HOODIE'];
-	var i = 0;
-	var z = 0;
 
-	var interval = setInterval(function() { 
 
-		 if (z>2){
-			z=0;
-			i=0;
-			
-		} if (i>x[z].length+1){
-			sleep(250).then(() => {
-			i=0;
-			z++;
-			});
-		}else{
-			let y = Array.from(x[z]);
-			y = y.slice(0,i);
-			let text = $("#change");
-			$(text).text(y.join(''));
-			console.log(text);
-		}
-		i++
-	},150 );
+	$(document).ready(anim());
 	</script>
 </html>
