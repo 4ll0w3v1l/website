@@ -9,6 +9,11 @@
 *{
 	overflow-y: invisible; 
 }
+
+body{
+  background-color: white;
+}
+
 #brand{
   position: absolute;
   left: 50%;
@@ -16,6 +21,7 @@
   transform: translate(-50%, -50%);
   border: 5px solid black;
   padding: 10px;
+  color: black;
 }
 #pic, #timer, #desc, #modelExamples, #mDesc{
   position: absolute;
